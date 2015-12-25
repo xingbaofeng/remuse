@@ -6,7 +6,7 @@ var desW = 640;
 var desH = 960;
 
 //缩放页面适配各个移动设备
-main.style.webkitTransform = "scale(" + winW/ desW + ")";
+main.style.webkitTransform = "scale(" + winH/ desH + ")";
 [].forEach.call(oLis, function () {
     arguments[0].index = arguments[1];
     arguments[0].addEventListener("touchstart", start, false);
@@ -52,6 +52,7 @@ function end(e) {
         oLis[this.prevSIndex].addEventListener("webkitTransitionEnd",function(){
             this.style.webkitTransition = "";
             this.firstElementChild.id="a"+(this.index+1);
+
         },false)
     }
 
