@@ -5,6 +5,7 @@
     <title></title>
     <meta name = "viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale = 2.0,user-scalable=yes">
     <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="animate.css"/>
 </head>
 <body>
 <div id="main">
@@ -20,39 +21,50 @@
                 <p>http://xingbaofeng.github.io/remuse/jianli/</p>
             </div>
         </li>
-        <li >
+        <li>
             <div class="a2">
-                <p>技能</p>
-                <p>原生JS完成客户需求</p>
-                <p>熟悉jQuery</p>
-                <p>精通前后台交互(ajax)</p>
-                <p>H5和CSS3布局</p>
+                <p><img src="images/c1.png" alt=""/>技能</p>
+                <p><img src="images/c2.png" alt=""/>原生JS完成客户需求</p>
+                <p><img src="images/c3.png" alt=""/>熟悉jQuery</p>
+                <p><img src="images/c4.png" alt=""/>精通前后台交互(ajax)</p>
+                <p><img src="images/c5.png" alt=""/>H5和CSS3布局</p>
+                <p><img src="images/c6.png" alt=""/>生活啊</p>
             </div>
         </li>
         <li>
             <div class="a3">
-                <p>人生感悟</p>
-                1.有些事，轻轻放下，未必不是轻松。有些人，深深记住，未必不是幸福。有些痛，淡淡看开，未必不是历练。坎坷路途，给身边一份温暖，风雨人生，给自己一个微笑。生活，就是体谅和理解，把快乐装在心中，静静融化！
+                <p class="work1">人生感悟</p>
+                1.有些事，轻轻放下，未必不是轻松。有些人，深深记住，未必不是幸福。有些痛，淡淡看开，未必不是历练。坎坷路途，给身边一份温暖，风雨人生，给自己一个微笑。生活，就是体谅和理解，把快乐装在心中，静静融化！<br/>
                 2.人生就是这样，想要拥有却不能够拥有，或许会使人们自暴自弃.
-
+                <p class="work">程序员的道路，需要我们有持之以恒的韧劲，坚持不懈的努力+灵活的大脑</p>
             </div>
         </li>
         <li>
             <div class="a4">
-                <p>每天养成良好的习惯，才能在实际工作中，摸索前进</p>
-                <p>2012/06-2013/9 XXX网络技术有限公司，任职前端开发职位，从项目中学到了很多前端方面技能</p>
-                <p>2013/9-2015/11 XXX可以有限公司，担任前端开发职位</p>
+                <p>2009/09毕业于邯郸职业技术学院管理系，从事系统实施工程师工作2年多，总结了很多关于项目方面的经验
+                对于客户的需求，可以准确把握。</p>
+                <p>2012/06-2013/9 XXX网络技术有限公司，任职前端开发职位，从项目中学到了很多前端方面技能，经验：换位思考，这样就能，真正的了解客户的需求</p>
+                <p>2013/9-2015/11 XXX可以有限公司，担任前端开发职位。这段时间的总结：项目组之间，相互协作，充分调动每个人的积极性。</p>
                 <p class="a4-head">从业经历</p>
             </div>
         </li>
         <li>
-            <div id="a5" class="a5">
+            <div id="a5" class="a5 flash bounce infinite">
                 <span>简历二维码</span>
-                <img src="images/erweima.png" alt=""/>
+                <img class="a5 animated bounce infinite"  src="images/erweima.png" alt=""/>
             </div>
         </li>
     </ul>
 </div>
+<script>
+    window.setTimeout(function(){
+        var oList=document.querySelectorAll(".a1>p");
+        for(var i=0;i<oList.length;i++){
+            oList[i].style.transform=" translate(0,0)";
+            oList[i].style.transform= "1s";
+        }
+    },200)
+</script>
 </body>
 </html>
 <script language="JavaScript" src="index.js"></script>

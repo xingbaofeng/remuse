@@ -38,7 +38,6 @@ function move(e) {
     } else if (changePos < 0) {/*往上滑*/
         this.prevSIndex = cur == oLis.length - 1 ? 0 : cur + 1;
         var pos =winH+changePos;
-
     }
     oLis[this.prevSIndex].style.webkitTransform = "translate(0,"+pos+"px)";
     oLis[this.prevSIndex].className = 'zIndex';
@@ -52,11 +51,10 @@ function end(e) {
         oLis[this.prevSIndex].addEventListener("webkitTransitionEnd",function(){
             this.style.webkitTransition = "";
             this.firstElementChild.id="a"+(this.index+1);
-
         },false)
     }
-
 }
+
 
 
 
