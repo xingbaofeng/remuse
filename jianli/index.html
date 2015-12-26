@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="animate.css"/>
 </head>
 <body>
+<div id="tip" class="tip animated bounce infinite"></div>
+<div style="display: block;z-index: 200;" class="music move" >
+    <audio style="display: block" id="musicAudio" src="video/beyond.mp3" preload="none" loop/>
+</div>
 <div id="main">
     <ul class="slide">
         <li class="zIndex">
@@ -23,20 +27,20 @@
         </li>
         <li>
             <div class="a2">
-                <p><img src="images/c1.png" alt=""/>技能</p>
-                <p><img src="images/c2.png" alt=""/>原生JS完成客户需求</p>
+                <p>技能</p>
+                <p><img src="images/c5.png" alt=""/>原生JS完成客户需求</p>
                 <p><img src="images/c3.png" alt=""/>熟悉jQuery</p>
                 <p><img src="images/c4.png" alt=""/>精通前后台交互(ajax)</p>
-                <p><img src="images/c5.png" alt=""/>H5和CSS3布局</p>
-                <p><img src="images/c6.png" alt=""/>生活啊</p>
+                <p><img src="images/c1.png" alt=""/>H5和CSS3布局</p>
+                <p><img src="images/c6.png" alt=""/>熟悉zepto.js</p>
             </div>
         </li>
         <li>
             <div class="a3">
-                <p class="work1">人生感悟</p>
-                1.有些事，轻轻放下，未必不是轻松。有些人，深深记住，未必不是幸福。有些痛，淡淡看开，未必不是历练。坎坷路途，给身边一份温暖，风雨人生，给自己一个微笑。生活，就是体谅和理解，把快乐装在心中，静静融化！<br/>
-                2.人生就是这样，想要拥有却不能够拥有，或许会使人们自暴自弃.
-                <p class="work">程序员的道路，需要我们有持之以恒的韧劲，坚持不懈的努力+灵活的大脑</p>
+                <div>项目经验</div>
+                <div>熟练的用原生js源码，满足客户的需求，并可以提出一些好的建议，优化用户体验，能独立完成css布局，图片延迟加载，IE浏览器的兼容，自己封装过DOM库，对jQuery有独到的见解。</div>
+                <div>开发项目主要利用单例模式，虽然感觉比构造函数模式差一点，但是调理上会很清楚，有利于团队合作开发，遇到问题可以快速的处理。</div>
+                <div>与后台开发人员密切配合，进行数据交互，通过自己坚持代码的低耦合 高内聚，来为公司节约资源和成本</div>
             </div>
         </li>
         <li>
@@ -49,9 +53,10 @@
             </div>
         </li>
         <li>
-            <div id="a5" class="a5 flash bounce infinite">
-                <span>简历二维码</span>
-                <img class="a5 animated bounce infinite"  src="images/erweima.png" alt=""/>
+            <div id="a5">
+                <span class="a5 animated jello infinite">简历二维码</span>
+                <span class="a5 a6 animated fadeOut infinite">请扫一扫</span>
+                <img class="a5 "  src="images/erweima.png" alt=""/>
             </div>
         </li>
     </ul>
@@ -66,6 +71,14 @@
             oList[i].style.webkitTransform= "1s";
         }
     },200)
+</script>
+<script type="text/javascript">
+    window.setTimeout(function () {
+        var oList = document.querySelectorAll(".a3>div");
+        for (var i = 0; i < oList.length; i++) {
+            oList[i].className = "move";
+        }
+    }, 200);
 </script>
 </body>
 </html>
